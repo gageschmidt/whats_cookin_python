@@ -10,8 +10,10 @@
 {% block content %}
     <div class="container">
       <div class="leftPanelOne border col-md-4 shadow-lg text-center" style="left: -120px; height: 630px">
-             <h1 style="color: #dfe5ef">Here's some text</h1>
-                {{ response }}
+             <h1 style="color: #dfe5ef">{{ response }}</h1>
       </div>
     </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+{% load static %}
+<script src="{% static 'js/notify.js' %}"></script>
 {% endblock %}
