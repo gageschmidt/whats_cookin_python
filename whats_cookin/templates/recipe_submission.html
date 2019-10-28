@@ -7,11 +7,12 @@
     </div>
 {% endblock %}
 {% block content %}
-    <form target="recipe-submission-iframe" action="/recipe/submit">
-        <h1 style="color: #dfe5ef">Recipe Name<label for="recipe-name"><input id="recipe-name"/></label></h1>
-        <h1 style="color: #dfe5ef">Ingredients<label for="recipe-name"><input id="recipe-name"/></label></h1>
-        <h1 style="color: #dfe5ef">Directions<label for="recipe-name"><textarea  id="recipe-name"></textarea></label></h1>
-        <button  style="color: #7DE2D1; border-color: #7DE2D1; background-color: #1a1b20;" id="submit-recipe">Submit</button>
+    <form target="recipe-submission-iframe" action="/submitrecipe" method="post">
+        {{ form }}
+        <button id="submit-recipe">Submit</button>
     </form>
     <iframe style="display: none;" name="recipe-submission-iframe"></iframe>
+    {% load static %}
+    <script src="{% static 'js/notify.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/recipe_submission.css' %}">
 {% endblock %}
