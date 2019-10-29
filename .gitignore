@@ -1,5 +1,2 @@
 .idea/
 __pycache__
-settings.py
-apps.py
-wsgi.py
