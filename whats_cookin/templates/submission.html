@@ -1,0 +1,18 @@
+{% extends 'layouts/base.html' %}
+{% block header %}
+    <div class="text-center underline">
+      <div class="greetingHeader text-muted">
+          <h1 class="border-bottom" style="color: #dfe5ef">What ya got?</h1>
+      </div>
+    </div>
+{% endblock %}
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+        <button id="submit-recipe">Submit</button>
+    </form>
+    {% load static %}
+    <script src="{% static 'js/notify.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/submission.css' %}">
+{% endblock %}

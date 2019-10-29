@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from whats_cookin.Models import elasticsearch
+from whats_cookin.models import elasticsearch
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 
