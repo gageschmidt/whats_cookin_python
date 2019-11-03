@@ -3,20 +3,28 @@ from datetime import datetime
 
 elasticsearch = Elasticsearch()
 
-document = {
-    'author': 'Gage',
-    'text': 'initial elastic',
-    'timestamp': datetime.now(),
-}
+
+def check_ids():
+    if check_if_index_exists() is False:
+        elasticsearch.create(index='recipes', id=1, body='first')
+    indices = elasticsearch.get('recipes', '*')
+    return indices.count()
 
 
-def index_single_document():
-    if check_index_exists() is False:
-        elasticsearch.index(index="new-index", doc_type='tweet', id=1, body=document)
-        return 'indexed!'
-    else:
-        return 'index already exists!'
+def index_recipe(name, ingredients, directions):
+    document = {
+        'name': name,
+        'ingredients': ingredients,
+        'directions': directions,
+        'timestamp': datetime.now()
+    }
+    elasticsearch.index(index='recipes', id=1, body=document)
 
 
-def check_index_exists():
-    return elasticsearch.exists(index="new-index", id=1)
+def check_if_index_exists():
+    return elasticsearch.exists('recipes', '*', '*')
+
+def get_homepage_recipe():
+    #will be random
+    return elasticsearch.get('recipes', '1')
+

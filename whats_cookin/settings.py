@@ -37,8 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'whats_cookin.apps.WhatsCookinConfig',
-    'elasticsearch'
+    'elasticsearch',
+    'whats_cookin.apps.WhatsCookinConfig'
 ]
 
 MIDDLEWARE = [

@@ -1,3 +1,9 @@
+label {
+    color: #dfe5ef;
+}
+#recipe-table {
+    left: 200px;
+}
 #submit-recipe {
     color: #7DE2D1;
     border-color: #7DE2D1;
