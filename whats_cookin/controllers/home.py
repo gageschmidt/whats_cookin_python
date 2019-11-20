@@ -5,8 +5,10 @@ from whats_cookin.models import elasticsearch
 
 def index(request):
     staticfiles_urlpatterns()
-    recipe = elasticsearch.get_homepage_recipe()
-    name = recipe['_source']['name']
-    ingredients = recipe['_source']['ingredients']
-    directions = recipe['_source']['directions']
+    if elasticsearch.count_current_indices() > 0:
+        recipe = elasticsearch.get_homepage_recipe()
+        name = recipe['name']
+        ingredients = recipe['ingredients']
+        directions = recipe['directions']
     return render(request, 'home.html', locals())
+

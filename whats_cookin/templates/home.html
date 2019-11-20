@@ -1,32 +1,32 @@
 {% extends 'layouts/base.html' %}
 {% block header %}
     <div class="text-center underline">
-      <div class="greeting-header text-muted">
-          <h1 class="border-bottom">Mmm food</h1>
-      </div>
+        <div class="greeting-header text-muted">
+            <h1 class="border-bottom">Mmm food</h1>
+        </div>
     </div>
 {% endblock %}
 
 {% block content %}
     <div class="container">
-      <div class="left-panel border col-md-4 shadow-lg text-center">
-          <div>
-              <h1 class="border-bottom">
-                  Recipe of the day
-              </h1>
-          </div>
-        <h1>
-            Recipe Name: {{ name }}
-        </h1>
-          <br>
-        <h1>
-            Recipe Ingredients:{{ ingredients }}
-        </h1>
-          <br>
-        <h1>
-            Recipe Directions: {{ directions }}
-        </h1>
-      </div>
+        <div class="left-panel border col-md-4 shadow-lg text-center">
+            <div>
+                <h1 class="border-bottom">
+                    Recipe of the day
+                </h1>
+            </div>
+            <h1>
+                Recipe Name: {{ name }}
+            </h1>
+            <br>
+            <h1>
+                Recipe Ingredients:{{ ingredients }}
+            </h1>
+            <br>
+            <h1>
+                Recipe Directions: {{ directions }}
+            </h1>
+        </div>
     </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 {% load static %}
