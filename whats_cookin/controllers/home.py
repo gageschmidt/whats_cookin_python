@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from whats_cookin.models import elasticsearch
+from whats_cookin.models import scrape
 
 
 def index(request):
@@ -10,5 +11,6 @@ def index(request):
         name = recipe['name']
         ingredients = recipe['ingredients']
         directions = recipe['directions']
+    data = scrape.parse()
     return render(request, 'home.html', locals())
 
