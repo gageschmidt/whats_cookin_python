@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from whats_cookin.models import elasticsearch
-from whats_cookin.models.recipe import RecipeForm
+from whats_cookin.forms.recipe import RecipeForm
 
 
 def index(request):
