@@ -1,11 +1,15 @@
 label {
     color: #dfe5ef;
 }
-#recipe-table {
-    left: 200px;
-}
 #submit-recipe {
     color: #7DE2D1;
     border-color: #7DE2D1;
     background-color: #1a1b20;
+}
+#submit-container {
+    position: center;
+    min-width: 1000px;
+    height: 800px;
+    right: -45px;
+    top: 50px;
 }

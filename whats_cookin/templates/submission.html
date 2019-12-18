@@ -7,30 +7,32 @@
     </div>
 {% endblock %}
 {% block content %}
-    <form method="post">
-        {% csrf_token %}
-        <div class="recipe-holder shadow-lg text-left">
-            <div>
-                <label id="recipe-name">
-                    <p> Recipe name: </p>
-                        {{ form.name }}
-                </label>
-            </div>
-            <div>
-                <label id="recipe-ingredients">
-                    <p> Recipe ingredients: </p>
-                        {{ form.ingredients }}
-                </label>
-            </div>
-            <div>
-                 <label id="recipe-directions">
-                     <p> Recipe directions: </p>
-                        {{ form.directions }}
-                 </label>
-            </div>
+    <div class="container">
+        <div class="panel border col-md-4 shadow-lg text-center" id="submit-container">
+            <form method="post" id="recipe-form">
+                {% csrf_token %}
+                    <div>
+                        <label id="recipe-name">
+                            <h2> Recipe name: </h2>
+                                {{ form.name }}
+                        </label>
+                    </div>
+                    <div>
+                        <label id="recipe-ingredients">
+                            <h2> Recipe ingredients: </h2>
+                                {{ form.ingredients }}
+                        </label>
+                    </div>
+                    <div>
+                         <label id="recipe-directions">
+                             <h2> Recipe directions: </h2>
+                                {{ form.directions }}
+                         </label>
+                    </div>
+                    <button id="submit-recipe">Submit</button>
+            </form>
         </div>
-        <button id="submit-recipe">Submit</button>
-    </form>
+    </div>
     {% load static %}
     <script src="{% static 'js/notify.js' %}"></script>
     <link rel="stylesheet" href="{% static 'css/submission.css' %}">
