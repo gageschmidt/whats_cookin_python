@@ -1,4 +1,5 @@
 from bs4 import BeautifulSoup
+from whats_cookin.models.mongo import Connect
 from whats_cookin.models import elasticsearch
 import random
 import re
@@ -47,9 +48,30 @@ def parse():
     }
     return recipe
 
-def index_recipe():
+
+def elasticsearch_index_recipe():
     recipe = parse()
     name = recipe['title']
     ingredients = recipe['ingredients']
     directions = recipe['directions']
     elasticsearch.index_recipe(name, ingredients, directions)
+
+
+def mongo_index_recipe():
+    connection = Connect.get_connection()
+    db = connection.test
+    recipe = parse()
+    name = recipe['title']
+    ingredients = recipe['ingredients']
+    directions = recipe['directions']
+    db.recipes.insert_one({
+        'name': name,
+        'ingredients': ingredients,
+        'directions': directions
+    })
+
+
+if __name__ == '__main__':
+    elasticsearch_index_recipe()
+    mongo_index_recipe()
+
