@@ -1,3 +1,12 @@
+.container {
+    border-radius: 15px;
+    border-style: outset;
+    border-width: thin;
+    height: 505px;
+    min-width: 1000px;
+    position: center;
+    top: 55px;
+}
 h1 {
     color: #dfe5ef;
 }
@@ -6,6 +15,8 @@ h2 {
     font-size: 18px;
 }
 #recipe-otd {
+    border-radius: 25px;
+    border-style: inset;
     position: center;
     min-width: 1000px;
     height: 500px;
