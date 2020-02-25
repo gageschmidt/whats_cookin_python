@@ -2,5 +2,18 @@ nav {
     float: left;
 }
 a {
+<<<<<<< Updated upstream
     color: #1BA9F5
+=======
+    color: #808080
+}
+body {
+    background-color: #c1e09e;
+}
+
+.text-center.underline {
+    border-radius: 28px;
+    box-shadow:
+             -20px -20px 60px #ffffcb;
+>>>>>>> Stashed changes
 }
