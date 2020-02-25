@@ -15,14 +15,9 @@ h2 {
     font-size: 18px;
 }
 #recipe-otd {
-<<<<<<< Updated upstream
-    border-radius: 25px;
-    border-style: inset;
-=======
     border-radius: 50px;
     box-shadow:   20px 20px 60px #a0ba83,
              -20px -20px 60px #e2ffb9;
->>>>>>> Stashed changes
     position: center;
     min-width: 1000px;
     height: 500px;
