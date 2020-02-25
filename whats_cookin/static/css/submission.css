@@ -7,9 +7,14 @@ label {
     background-color: #1a1b20;
 }
 #submit-container {
+    border-color: #808080;
+    border-radius: 50px;
+    box-shadow: 3px 3px 10px #a0ba83,
+                -3px -3px 22px #e2ffb9;
     position: center;
     min-width: 1000px;
-    height: 800px;
+    height: 500px;
     right: -45px;
     top: 50px;
+    text-align: center;
 }

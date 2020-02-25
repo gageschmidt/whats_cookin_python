@@ -1,14 +1,8 @@
 {% extends 'layouts/base.html' %}
-{% block header %}
-    <div class="text-center underline">
-      <div class="greeting-header text-muted ">
-          <h1 class="border-bottom" style="color: #dfe5ef">What ya got?</h1>
-      </div>
-    </div>
-{% endblock %}
+
 {% block content %}
     <div class="container">
-        <div class="panel border col-md-4 shadow-lg text-center" id="submit-container">
+        <div id="submit-container">
             <form method="post" id="recipe-form">
                 {% csrf_token %}
                     <div>

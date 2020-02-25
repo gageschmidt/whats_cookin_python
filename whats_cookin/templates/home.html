@@ -1,15 +1,18 @@
 {% extends 'layouts/base.html' %}
 {% block header %}
-    <div class="text-center underline">
-        <div class="greeting-header text-muted">
-            <h1 class="border-bottom text-center">Mmm food</h1>
-        </div>
-    </div>
+    <br>
+     <h2>
+        Looking for something?
+     </h2>
+    <label for="recipe-search">
+        <input id="recipe-search-input" type="text" />
+    </label>
 {% endblock %}
 
 {% block content %}
+    <br>
     <div class="container">
-        <div  id="recipe-otd">
+        <div id="recipe-otd">
             <br>
             <div>
                 <h2 class="border-bottom">
