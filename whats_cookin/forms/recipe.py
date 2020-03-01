@@ -6,18 +6,24 @@ class RecipeForm(forms.Form):
         label='Recipe Name',
         max_length=100,
         widget=forms.TextInput(
-            attrs={'class': 'name', 'required': 'true'}
+            attrs={'class': 'name-form-input', 'required': 'true'}
         )
     )
     ingredients = forms.CharField(
         label='Ingredients',
         widget=forms.Textarea(
-            attrs={'class': 'ingredients', 'required': 'true'}
+            attrs={'class': 'ingredients-form-input', 'required': 'true'}
         )
     )
     directions = forms.CharField(
         label='Directions',
         widget=forms.Textarea(
-            attrs={'class': 'directions', 'required': 'true'}
+            attrs={'class': 'directions-form-input', 'required': 'true'}
         )
     )
+
+    class Media:
+        css: {
+            'all': ('submission.css',)
+        }
+

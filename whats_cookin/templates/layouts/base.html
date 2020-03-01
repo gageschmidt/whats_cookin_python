@@ -1,36 +1,61 @@
 <!doctype html>
 <html lang="en">
-  <head>
-      <title> What's Cooking? </title>
-    <!-- Required meta tags -->
+<head>
+    <title> What's Cooking? </title>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-  </head>
-  <body>
-
-  <div class="text-center underline">
-      <nav>
-          <a href="/">Homepage |</a>
-          <a href="/submit">Submit Recipe </a>
-      </nav>
-      <div class="greeting-header text-muted under">
-      <h1>
-          {% block header %}
-          {% endblock %}
-      </h1>
-      </div>
-  </div>
-  {% block content %}
-  {% endblock %}
-  {% load static %}
-    <script src="{% static 'js/notify.js' %}"></script>
+    <!-- font awesome cdn -->
+    <script src="https://kit.fontawesome.com/f2647e425b.js" data-auto-add-css="false" crossorigin="anonymous"></script>
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="nav">
+        <ul class="nav-ul">
+            <li class="nav-item">
+                <a class="nav-link" href="/">
+                    <i class="fas fa-hamburger fa-3x"></i>
+                    <span class="nav-text">
+                         Homepage
+                    </span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/submit">
+                    <i class="fas fa-pizza-slice  fa-3x"></i>
+                    <span class="nav-text">
+                         Submit Recipe
+                    </span>
+                </a>
+            </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-carrot  fa-3x"></i>
+                    <span class="nav-text">
+                         Nothing yet
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="search-container">
+        <span class="search-title">
+            What're you hungry for?
+        </span>
+        <label for="recipe-search">
+            <input id="recipe-search-input" type="text" />
+        </label>
+    </div>
+    {% block content %}
+    {% endblock %}
+    {% load static %}
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
-    <link rel="stylesheet" href="{% static 'css/homepage.css' %}">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
+</body>

@@ -1,42 +1,30 @@
 {% extends 'layouts/base.html' %}
-{% block header %}
-    <div class="text-center underline">
-        <div class="greeting-header text-muted">
-            <h1 class="border-bottom text-center">Mmm food</h1>
-        </div>
-    </div>
-{% endblock %}
 
 {% block content %}
-    <div class="container">
-        <div class="panel border col-md-4 shadow-lg text-center" id="recipe-otd">
-            <br>
-            <div>
-                <h2 class="border-bottom">
-                    Recipe of the day
-                </h2>
-            </div>
-            <div id="name">
-                <h2>
-                    Recipe Name: {{ name }}
-                </h2>
-            </div>
-            <br>
-            <div id="ingredients">
-                <h2>
-                    Recipe Ingredients:{{ ingredients }}
-                </h2>
-            </div>
-            <br>
-            <div id="directions">
-                <h2>
-                    Recipe Directions: {{ directions }}
-                </h2>
-            </div>
+    <div id="recipe-otd">
+        <div class="recipe-title">
+           <span class="recipe-otd-title">
+               Recipe of the day
+           </span>
+        </div>
+        <div class="recipe-name">
+            <span class="recipe-name-text">
+                Recipe Name: {{ name }}
+            </span>
+        </div>
+        <br>
+        <div class="recipe-ingredients">
+            <span class="recipe-ingredients-text">
+                Recipe Ingredients:{{ ingredients }}
+            </span>
+        </div>
+        <br>
+        <div class="recipe-directions">
+            <span class="recipe-directions-text">
+                Recipe Directions: {{ directions }}
+            </span>
         </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     {% load static %}
-    <script src="{% static 'js/notify.js' %}"></script>
     <link rel="stylesheet" href="{% static 'css/homepage.css' %}">
 {% endblock %}

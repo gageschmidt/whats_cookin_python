@@ -14,9 +14,11 @@ def index(request):
             try:
                 elasticsearch.index_recipe(name, ingredients, directions)
             finally:
-              return redirect(request, form)
+                return redirect(request, form)
     else:
-       return redirect(request, form)
+        return redirect(request, form)
+
 
 def redirect(request, form):
     return render(request, 'submission.html', {'form': form}, locals())
+
