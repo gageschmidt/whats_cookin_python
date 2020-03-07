@@ -3,6 +3,16 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+    try {
+        let test =fetch("http://127.0.0.1:8000"
+        )
+          .then((data) => {
+            console.log(data);
+          });
+        console.log(test);
+    } catch (e) {
+        console.log(e);
+    }
   return (
     <div className="App">
       <header className="App-header">
