@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from rest_framework import viewsets
-from django.http import HttpResponse
+from django.http import JsonResponse
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from whats_cookin.models import elasticsearch
 
@@ -16,5 +16,7 @@ def index(request):
             directions = recipe['directions']
         return name or 'test'
     finally:
-        response = HttpResponse('this is a test', content_type="application/json")
+        response = JsonResponse({
+            'heres': 'data'
+        })
         return response

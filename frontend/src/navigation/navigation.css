@@ -1,0 +1,74 @@
+body {
+    background-color: #c1e09e;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nanum Gothic', serif;
+}
+main {
+    margin-left: 5rem;
+    padding: 1rem;
+}
+.nav {
+    width: 5rem;
+    height: 100vh;
+    position: fixed;
+    background: black;
+    transition: width 200ms ease;
+}
+.nav:hover {
+    width: 16rem;
+}
+.nav:hover .nav-text{
+    display: block;
+}
+.nav-link {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    filter: grayscale(100%) opacity(0.7);
+    font-size: 20px;
+}
+.nav-link:hover{
+    filter: grayscale(0%) opacity(1);
+}
+.nav-item {
+    align-items: center;
+    display: flex;
+    height: 5rem;
+    width: 100%;
+}
+.nav-text {
+    display: none;
+}
+.nav-ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#recipe-search-input {
+    left: 38%;
+    top: 12%;
+    margin-top: -50px;
+    margin-left: -50px;
+    width: 100px;
+    position: absolute;
+    height: 35px;
+    min-width: 500px;
+    border-radius: 35px;
+    box-shadow: inset 3px 3px 10px #a0ba83,
+                inset -3px -3px 20px #e2ffb9;
+}
+:root {
+    font-size: 20px;
+}
+.search-title {
+    left: 38%;
+    top: 8%;
+    margin-top: -50px;
+    margin-left: -50px;
+    position: absolute;
+}
