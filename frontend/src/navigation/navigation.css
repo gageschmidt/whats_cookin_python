@@ -1,3 +1,6 @@
+a {
+    text-decoration: none;
+}
 body {
     background-color: #c1e09e;
     margin: 0;
@@ -16,7 +19,7 @@ main {
     transition: width 200ms ease;
 }
 .nav:hover {
-    width: 16rem;
+    width: 11rem;
 }
 .nav:hover .nav-text{
     display: block;

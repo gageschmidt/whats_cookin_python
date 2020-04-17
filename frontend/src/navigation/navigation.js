@@ -8,32 +8,44 @@ function fontAwesomeCdn() {
     document.body.appendChild(script);
 }
 
+function moveRecipeOfTheDay() {
+    console.log('hello?');
+    let recipeElement = document.getElementById('recipe-otd');
+    let navigationElement = document.getElementsByClassName('nav');
+    navigationElement.onmouseover = function () {
+        recipeElement.setAttribute('style', 'left: 55%;')
+    }
+}
+
 function Navigation() {
     fontAwesomeCdn();
     return (
-        <nav className="nav">
+        <nav className="nav" onMouseOver={moveRecipeOfTheDay()}>
             <ul className="nav-ul">
                 <li className="nav-item">
                     <a className="nav-link" href="/">
+                          &nbsp;
                         <i className="fas fa-hamburger fa-3x"></i>
                         <span className="nav-text">
-                         Homepage
+                           &nbsp; Homepage
                         </span>
                     </a>
                 </li>
                 <li className="nav-item">
                     <a className="nav-link" href="/submit">
+                        &nbsp;
                         <i className="fas fa-pizza-slice  fa-3x"></i>
                         <span className="nav-text">
-                         Submit Recipe
+                         &nbsp; Submit Recipe
                         </span>
                     </a>
                 </li>
                 <li className="nav-item">
                     <a className="nav-link" href="#">
+                          &nbsp;
                         <i className="fas fa-carrot  fa-3x"></i>
                         <span className="nav-text">
-                         Nothing yet
+                         &nbsp; Nothing yet
                         </span>
                     </a>
                 </li>
