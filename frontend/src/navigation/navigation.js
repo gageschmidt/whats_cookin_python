@@ -24,7 +24,8 @@ function Navigation() {
             <ul className="nav-ul">
                 <li className="nav-item">
                     <a className="nav-link" href="/">
-                          &nbsp;
+                        &nbsp;
+                        &nbsp;
                         <i className="fas fa-hamburger fa-3x"></i>
                         <span className="nav-text">
                            &nbsp; Homepage
@@ -34,6 +35,7 @@ function Navigation() {
                 <li className="nav-item">
                     <a className="nav-link" href="/submit">
                         &nbsp;
+                        &nbsp;
                         <i className="fas fa-pizza-slice  fa-3x"></i>
                         <span className="nav-text">
                          &nbsp; Submit Recipe
@@ -42,7 +44,8 @@ function Navigation() {
                 </li>
                 <li className="nav-item">
                     <a className="nav-link" href="#">
-                          &nbsp;
+                        &nbsp;
+                        &nbsp;
                         <i className="fas fa-carrot  fa-3x"></i>
                         <span className="nav-text">
                          &nbsp; Nothing yet
