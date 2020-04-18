@@ -1,0 +1,16 @@
+#recipe-otd {
+    left: 21%;
+    top: 18%;
+    margin-top: -50px;
+    margin-left: -50px;
+    position: absolute;
+    border-color: #808080;
+    border-radius: 50px;
+    box-shadow: 3px 3px 10px #a0ba83,
+                -3px -3px 22px #e2ffb9;
+    min-width: 1000px;
+    max-width: 1000px;
+    height: 500px;
+    text-align: center;
+    overflow-wrap: normal;
+}
