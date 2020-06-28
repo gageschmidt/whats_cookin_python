@@ -27,7 +27,7 @@ def get_recipe_data(data):
 
 
 def scrape():
-    recipe_url = 'https://www.allrecipes.com/recipe/2' + str(random.randint(00000, 99999))
+    recipe_url = 'https://www.allrecipes.com/recipe/' + str(random.randint(000000, 999999))
     recipe = check_recipe_url(recipe_url)
     return recipe
 
@@ -45,7 +45,14 @@ def parse():
         'ingredients': ingredients,
         'directions': directions
     }
+    check_recipe_data(recipe)
     return recipe
+
+def check_recipe_data(recipe):
+    for data in recipe:
+        for key in data:
+            if not data[key]:
+                parse()
 
 
 def mongo_index_recipe():
@@ -55,7 +62,7 @@ def mongo_index_recipe():
     name = recipe['title']
     ingredients = recipe['ingredients']
     directions = recipe['directions']
-    recipe_id = db['recipes'].count() + 1
+    recipe_id = db['recipes'].count_documents({}) + 1
     db.recipes.insert_one({
         'id': recipe_id,
         'name': name,
