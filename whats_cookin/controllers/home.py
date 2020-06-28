@@ -1,5 +1,3 @@
-from django.shortcuts import render
-from rest_framework import viewsets
 from django.http import JsonResponse
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from whats_cookin.models.mongo import Connect

@@ -1,5 +1,4 @@
 from bs4 import BeautifulSoup
-from whats_cookin.models import elasticsearch
 from whats_cookin.models.mongo import Connect
 import random
 import re
