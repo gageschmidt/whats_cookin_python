@@ -38,6 +38,12 @@ class Homepage extends React.Component {
         } else if (!isLoaded) {
             return <div>Loading...</div>;
         } else {
+            const ingredients = recipe.ingredients.map(
+                (ingredient, i) => <li key={i}>{ingredient}</li>
+            );
+            const directions = recipe.directions.map(
+                (direction, i) => <li key={i}>{direction}</li>
+            );
             return (
                 <div id="recipe-otd">
                     <div className="recipe-title">
@@ -46,27 +52,24 @@ class Homepage extends React.Component {
                        </span>
                     </div>
                     <div className="recipe-name">
-                        <span className="recipe-name-text">
-                            Recipe Name:
-                        </span>
                         <h3>
                             {recipe.name}
                         </h3>
                     </div>
                     <div className="recipe-ingredients">
                         <span className="recipe-ingredients-text">
-                            Recipe Ingredients:
+                            Ingredients:
                         </span>
                         <h3>
-                            {recipe.ingredients}
+                            {ingredients}
                         </h3>
                     </div>
                     <div className="recipe-directions">
                         <span className="recipe-directions-text">
-                            Recipe Directions:
+                            Directions:
                         </span>
                          <h3>
-                            {recipe.directions}
+                            {directions}
                         </h3>
                     </div>
                 </div>)
