@@ -3,8 +3,18 @@ import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 import Homepage from "./home/homepage";
 import Navigation from "./navigation/navigation";
+import Submission from "./submission/submission"
+import {BrowserRouter, Switch, withRouter} from 'react-router-dom';
+import { Router, Route } from "react-router";
 
-ReactDOM.render(<div><Homepage /><Navigation /></div>, document.getElementById('root'));
+ReactDOM.render(<BrowserRouter>
+                    <Navigation />
+                    <Switch>
+                        <Route path='/' component={ Homepage } exact/>
+                        <Route path='/submit' component={ withRouter( Submission ) } exact/>
+                    </Switch>
+                </BrowserRouter>, document.getElementById('root')
+);
 
 
 // If you want your app to work offline and load faster, you can change

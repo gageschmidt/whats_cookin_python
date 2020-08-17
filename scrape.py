@@ -22,6 +22,7 @@ def grab_html(recipe_url):
         time.sleep(3)
         scrape()
     else:
+        cmd.write(recipe_url + '\n')
         cmd.write('Success! Continue.. \n')
         cmd.flush()
         recipe_data = BeautifulSoup(urllib.request.urlopen(recipe_url), 'html.parser')
@@ -38,7 +39,7 @@ def get_recipe_data(data):
 
 def generate_page():
     # Generate a url to hit for data.
-    recipe_url = 'https://www.allrecipes.com/recipe/' + str(random.randint(000000, 999999))
+    recipe_url = 'https://www.allrecipes.com/recipe/' + str(random.randint(00000, 999999))
     return recipe_url
 
 
@@ -73,6 +74,7 @@ def check_recipe_data(recipe):
     # Restart the process if anything is missing, to avoid incomplete recipe data.    
     for index in recipe:
         value = recipe[index]
+        cmd.write(str(value))
         if not value:
             cmd.write('Recipe is missing data. Finding new one. \n')
             cmd.flush()
