@@ -2,20 +2,24 @@ a {
     text-decoration: none;
 }
 body {
-    background-color: #c1e09e;
+    color: ghostwhite;
+    /*Navy blue speckled*/
+    background-color: #00071a;
+    background-image: url("/backgrounds/speckled.png");
     margin: 0;
     padding: 0;
     font-family: 'Nanum Gothic', serif;
 }
 main {
     margin-left: 5rem;
-    padding: 1rem;
+    padding: 0.5rem;
 }
 .nav {
-    width: 5rem;
+    filter: grayscale(100%) opacity(.5);
+    width: 3.5rem;
     height: 100vh;
     position: fixed;
-    background: black;
+    background-color: #00071a;
     transition: width 200ms ease;
 }
 .nav:hover {
@@ -25,10 +29,10 @@ main {
     display: block;
 }
 .nav-link {
+    color: ghostwhite;
     display: flex;
     align-items: center;
     height: 5rem;
-    filter: grayscale(100%) opacity(0.7);
     font-size: 20px;
 }
 .nav-link:hover{

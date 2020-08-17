@@ -2,7 +2,8 @@ import React from "react";
 import './navigation.css';
 
 
-class Navigation extends React.Component {
+class Navigation extends React.Component
+{
 
     fontAwesomeCdn() {
         let script = document.createElement('script');
@@ -10,6 +11,7 @@ class Navigation extends React.Component {
         script.crossOrigin = 'anonymous';
         document.body.appendChild(script);
     }
+
 
    render() {
         this.fontAwesomeCdn();
@@ -20,17 +22,17 @@ class Navigation extends React.Component {
                         <a className="nav-link" href="/">
                             &nbsp;
                             &nbsp;
-                            <i className="fas fa-hamburger fa-3x"></i>
+                            <i className="fas fa-hamburger fa-2x"></i>
                             <span className="nav-text">
                            &nbsp; Homepage
                         </span>
                         </a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="/submit">
+                        <a className="nav-link" href={'/submit'}>
                             &nbsp;
                             &nbsp;
-                            <i className="fas fa-pizza-slice  fa-3x"></i>
+                            <i className="fas fa-pizza-slice  fa-2x"></i>
                             <span className="nav-text">
                          &nbsp; Submit Recipe
                         </span>
@@ -40,7 +42,7 @@ class Navigation extends React.Component {
                         <a className="nav-link" href="#">
                             &nbsp;
                             &nbsp;
-                            <i className="fas fa-carrot  fa-3x"></i>
+                            <i className="fas fa-carrot  fa-2x"></i>
                             <span className="nav-text">
                          &nbsp; Nothing yet
                         </span>
